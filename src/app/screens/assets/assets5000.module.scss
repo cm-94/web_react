@@ -1,0 +1,129 @@
+:global(.wts-shell) {
+  .asset-summary {
+    background: var(--raised);
+    padding: 24px 16px 16px;
+    border-radius: 10px;
+    margin: 32px 0 45px;
+  }
+  .asset-summary-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px 25px;
+    gap: 20px;
+    h2 {
+      color: var(--muted);
+      font-size: var(--text-lg);
+    }
+    > div > p {
+      margin-top: 25px;
+      font-size: var(--text-sm);
+    }
+    b {
+      color: var(--accent);
+      margin-left: 8px;
+    }
+  }
+  .asset-total {
+    text-align: right;
+    flex-shrink: 0;
+    strong {
+      font-size: var(--text-3xl);
+      letter-spacing: -1px;
+    }
+    &.asset-total p {
+      margin-top: 0;
+      font-size: var(--text-md);
+    }
+  }
+  .asset-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    > article {
+      background: var(--panel);
+      border-radius: 8px;
+      padding: 25px;
+    }
+    h3 {
+      color: var(--muted);
+      margin-bottom: 27px;
+      span {
+        float: right;
+      }
+    }
+    :global(.area-chart) {
+      color: var(--up);
+      height: 115px;
+      margin: 22px 0 10px;
+    }
+    :global(.tabs) {
+      justify-content: space-between;
+      button {
+        padding: 5px;
+        font-size: var(--text-xs);
+      }
+    }
+  }
+  .asset-row {
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 0;
+    color: var(--muted);
+    gap: 8px;
+    > div:last-child {
+      text-align: right;
+    }
+    small {
+      display: block;
+      margin-top: 6px;
+    }
+    strong {
+      color: var(--text);
+    }
+  }
+  .asset-insight {
+    font-size: var(--text-sm);
+  }
+  .assets-screen > :global(.tabs) {
+    border-bottom: 1px solid var(--line);
+    gap: 15px;
+    button:global(.active) {
+      color: var(--accent);
+      background: none;
+      border-bottom: 2px solid var(--accent);
+      border-radius: 0;
+    }
+  }
+  @media (max-width: 1250px) {
+    .asset-summary-top {
+      flex-wrap: wrap;
+    }
+  }
+  @media (max-width: 1250px) {
+    .asset-grid {
+      grid-template-columns: 1fr 1fr;
+      > article:last-child {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+  @media (max-width: 800px) {
+    .asset-grid {
+      grid-template-columns: 1fr;
+      > article:last-child {
+        grid-column: auto;
+      }
+    }
+  }
+  @media (max-width: 800px) {
+    .asset-total strong {
+      font-size: var(--text-2xl);
+    }
+  }
+  @media (max-width: 800px) {
+    .asset-summary-top > div > p {
+      line-height: 2;
+    }
+  }
+}

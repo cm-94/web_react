@@ -1,0 +1,133 @@
+:global(.wts-shell) {
+  .screen-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 28px;
+  }
+  .announcement {
+    padding: 8px 17px;
+    border: 1px solid var(--down);
+    border-radius: 30px;
+    background: var(--raised);
+    font-size: var(--text-sm);
+    span {
+      margin-left: 14px;
+    }
+  }
+  .market-status {
+    margin-left: auto;
+    font-size: var(--text-xs);
+    color: var(--muted);
+    white-space: nowrap;
+    i,
+    :global(.live-dot) {
+      background: var(--accent);
+    }
+  }
+  .market-status i {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-right: 5px;
+  }
+  .index-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .index-card {
+    position: relative;
+    background: var(--raised);
+    padding: 20px;
+    border-radius: 9px;
+    overflow: hidden;
+    min-height: 122px;
+    p {
+      font-size: var(--text-sm);
+      margin-bottom: 5px;
+    }
+    strong {
+      display: block;
+      font-size: var(--text-lg);
+      letter-spacing: -0.5px;
+    }
+    > span {
+      font-size: var(--text-sm);
+    }
+    :global(.sparkline) {
+      position: absolute;
+      right: 12px;
+      top: 36px;
+      width: 30%;
+      height: 40px;
+      opacity: 0.9;
+    }
+  }
+  .home-screen :global(.section-heading) {
+    margin-top: 52px;
+  }
+  .ranking-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 50px;
+    h3 {
+      padding: 10px 0 22px;
+      border-bottom: 1px solid var(--line);
+    }
+  }
+  @media (min-width: 1800px) {
+    .index-card {
+      min-height: 140px;
+      padding: 24px;
+    }
+  }
+  @media (max-width: 1250px) {
+    .market-status {
+      display: none;
+    }
+  }
+  @media (max-width: 1250px) {
+    .index-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 1250px) {
+    .ranking-grid {
+      gap: 22px;
+    }
+  }
+  @media (max-width: 800px) {
+    .screen-toolbar {
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  }
+  @media (max-width: 800px) {
+    .announcement {
+      font-size: var(--text-xs);
+    }
+  }
+  @media (max-width: 800px) {
+    .index-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+  }
+  @media (max-width: 800px) {
+    .index-card {
+      padding: 15px;
+      min-height: 115px;
+      :global(.sparkline) {
+        width: 25%;
+      }
+    }
+  }
+  @media (max-width: 800px) {
+    .ranking-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+:global(.wts-shell) {
+  .stock-overview {
+    padding-bottom: 22px;
+    h2 {
+      font-size: var(--text-md);
+      margin-top: 20px;
+    }
+    :global(.tabs) button {
+      padding: 5px 8px;
+      font-size: var(--text-xs);
+    }
+    p {
+      margin: 15px 0;
+    }
+  }
+  .quote-price {
+    display: block;
+    font-size: var(--text-2xl);
+    letter-spacing: -1px;
+  }
+}

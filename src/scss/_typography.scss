@@ -1,0 +1,18 @@
+.wts-shell {
+  --font-family: Arial, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --text-xs: 11px;
+  --text-sm: 12px;
+  --text-base: 14px;
+  --text-md: 16px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 30px;
+  --text-3xl: 38px;
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+  font-family: var(--font-family);
+  font-size: var(--text-base);
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+}

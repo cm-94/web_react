@@ -1,0 +1,40 @@
+// RGB 색상 토큰. 컴포넌트에서는 의미 기반 CSS 변수를 사용합니다.
+$background: rgb(31, 30, 38);
+$panel: rgb(37, 36, 45);
+$raised: rgb(44, 44, 57);
+$line: rgb(53, 52, 65);
+$text: rgb(244, 244, 248);
+$muted: rgb(143, 143, 157);
+$accent: rgb(240, 234, 0);
+$up: rgb(248, 58, 48);
+$down: rgb(73, 126, 255);
+$white: rgb(255, 255, 255);
+.wts-shell {
+  --bg: #{$background};
+  --panel: #{$panel};
+  --raised: #{$raised};
+  --line: #{$line};
+  --text: #{$text};
+  --muted: #{$muted};
+  --accent: #{$accent};
+  --up: #{$up};
+  --down: #{$down};
+  --black: rgb(14, 14, 18);
+  --white: #{$white};
+  --art-blue: rgb(220, 237, 253);
+  --art-mint: rgb(220, 243, 239);
+  --art-cream: rgb(242, 232, 217);
+  --art-ink: rgb(49, 87, 128);
+  --shadow: rgb(0, 0, 0, 0.3);
+  --overlay: rgb(0, 0, 0, 0.6);
+  &.light-theme {
+    --bg: rgb(247, 248, 250);
+    --panel: rgb(255, 255, 255);
+    --raised: rgb(236, 239, 245);
+    --line: rgb(217, 221, 230);
+    --text: rgb(29, 33, 43);
+    --muted: rgb(102, 109, 125);
+    --accent: rgb(130, 105, 0);
+    --black: rgb(231, 234, 241);
+  }
+}

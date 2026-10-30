@@ -1,0 +1,35 @@
+:global(.wts-shell) {
+  .split-screen {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 350px;
+    min-height: 100%;
+  }
+  .watch-screen {
+    padding: 40px 36px;
+  }
+  .selected-row {
+    background: var(--panel);
+  }
+  .stock-select {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    text-align: left;
+    small {
+      display: block;
+      color: var(--muted);
+    }
+    :global(.favorite) {
+      margin-left: auto;
+    }
+  }
+  .watch-news {
+    margin-top: 85px;
+  }
+  @media (max-width: 800px) {
+    .split-screen {
+      grid-template-columns: 1fr;
+    }
+  }
+}

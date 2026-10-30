@@ -1,0 +1,27 @@
+:global(.wts-shell) {
+  .orderbook {
+    > p {
+      font-size: var(--text-xs);
+      margin-bottom: 10px;
+    }
+    > div {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 8px;
+      border-bottom: 1px solid var(--line);
+      isolation: isolate;
+      > span {
+        position: absolute;
+        inset: 0 auto 0 0;
+        background: var(--down);
+        opacity: 0.18;
+        z-index: -1;
+      }
+      &.bid > span {
+        background: var(--up);
+      }
+    }
+  }
+}
